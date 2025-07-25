@@ -4,7 +4,7 @@
 
 Landing Survey Online RS Persahabatan
 
-![screencapture-survey-rspersahabatan-co-id-2023-08-08-10_40_39](https://github.com/rspersahabatan/survey.rspersahabatan.co.id/assets/5575882/ff149769-b372-442d-9f81-e77f131b4c16)
+![ss-survey](ss-survey.png)
 
 
 [View Live Demo](https://survey.rspersahabatan.co.id/)
