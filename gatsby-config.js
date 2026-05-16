@@ -37,11 +37,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-umami`,
       options: {
-        websiteId: 'ebbbce1a-7df7-40be-a96f-619e3d765ac5',
-        srcUrl: 'https://umami.persahabatan.co.id/script.js',
+        websiteId: "6b61c47d-a651-448e-b30a-e802e9546982",
+        srcUrl: "https://umami.persahabatan.co.id/script.js",
         includeInDevelopment: false,
         autoTrack: true,
-        respectDoNotTrack: true
+        respectDoNotTrack: true,
       },
     },
     `gatsby-plugin-styled-components`,
