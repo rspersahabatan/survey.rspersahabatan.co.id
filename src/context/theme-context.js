@@ -22,6 +22,8 @@ export const ThemeProvider = ({ children }) => {
   useEffect(() => {
     if (mounted) {
       document.documentElement.setAttribute("data-theme", theme);
+      document.body.classList.remove("light-mode", "dark-mode");
+      document.body.classList.add(`${theme}-mode`);
       localStorage.setItem("theme", theme);
     }
   }, [theme, mounted]);
