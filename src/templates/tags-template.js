@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
 import Layout from "../components/layout";
+import Seo from "../components/seo";
 import PostList from "../components/post-list";
 import StyledLink from "../components/styled-link";
 import styled from "styled-components";
@@ -9,10 +10,9 @@ const TagsTemplate = ({ pageContext, data }) => {
   const { tag } = pageContext;
   const { totalCount } = data.allMarkdownRemark;
   const posts = data.allMarkdownRemark.nodes;
-  const title = `List terkait ${tag}`;
 
   return (
-    <Layout title={title}>
+    <Layout>
       <TagsTemplateWrapper>
         <Title>
           {totalCount} Layanan terkait "{tag}"
@@ -47,6 +47,10 @@ const TagsTemplate = ({ pageContext, data }) => {
 
 export default TagsTemplate;
 
+export const Head = ({ pageContext }) => (
+  <Seo title={`List terkait ${pageContext.tag}`} />
+);
+
 const TagsTemplateWrapper = styled.div`
   padding-top: var(--size-900);
 `;
@@ -76,6 +80,7 @@ export const pageQuery = graphql`
           tags
           title
           tujuan
+          social_image
         }
         timeToRead
         excerpt

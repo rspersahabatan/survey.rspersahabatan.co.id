@@ -48,7 +48,6 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    "gatsby-plugin-use-dark-mode",
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -75,12 +74,6 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-relative-images`,
-            options: {
-              staticFolderName: "static",
-            },
-          },
-          {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 630,
@@ -99,7 +92,7 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-netlify-cms",
+      resolve: "gatsby-plugin-decap-cms",
       options: {
         modulePath: `${__dirname}/src/netlify-cms/index.js`,
         enableIdentityWidget: true,
@@ -173,8 +166,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Frosted Blog`,
-        short_name: `Gatsby Frosted`,
+        name: `Survey Online RS Persahabatan`,
+        short_name: `Survey RS Persahabatan`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
@@ -182,6 +175,5 @@ module.exports = {
         icon: `src/images/icon.png`,
       },
     },
-    `gatsby-plugin-react-helmet`,
   ],
 };

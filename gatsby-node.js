@@ -177,6 +177,8 @@ exports.createSchemaCustomization = ({ actions }) => {
       tujuan: String
       template: String
       tags: [String!]
+      profile_image: String
+      social_image: String
     }
 
     type Fields {

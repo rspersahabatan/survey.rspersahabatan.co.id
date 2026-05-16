@@ -2,18 +2,18 @@ import React from "react";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/layout";
 import PostList from "../components/post-list";
+import Seo from "../components/seo";
 import styled from "styled-components";
 import StyledLink from "../components/styled-link";
 
 const HomePage = ({ data }) => {
   const posts = data.allMarkdownRemark.nodes;
   const intro = data.markdownRemark.html;
-  const title = data.markdownRemark.frontmatter.title;
 
   return (
-    <Layout title={title}>
+    <Layout>
 
-      <Link to="/" 
+      <Link to="/"
         css={`
         color: inherit;
         background-color: rgba(255, 255, 255, 0.4);
@@ -23,7 +23,7 @@ const HomePage = ({ data }) => {
             text-decoration: none;
         }
         `}>
-    
+
         <Intro
           dangerouslySetInnerHTML={{
             __html: intro,
@@ -51,6 +51,10 @@ const HomePage = ({ data }) => {
 };
 
 export default HomePage;
+
+export const Head = ({ data }) => (
+  <Seo title={data.markdownRemark.frontmatter.title} />
+);
 
 const Intro = styled.div`
   display: flex;
@@ -100,11 +104,7 @@ export const pageQuery = graphql`
           description
           title
           tujuan
-          social_image {
-            childImageSharp {
-              gatsbyImageData(placeholder: BLURRED, formats: PNG, height: 400)
-            }
-          }
+          social_image
         }
       }
     }

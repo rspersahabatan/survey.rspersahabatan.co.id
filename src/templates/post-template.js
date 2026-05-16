@@ -1,22 +1,17 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
 import Layout from "../components/layout";
+import Seo from "../components/seo";
 import styled from "styled-components";
 import Tags from "../components/tags";
 
 const PostTemplate = ({ data }) => {
-  const { frontmatter, excerpt, html } = data.markdownRemark;
+  const { frontmatter, html } = data.markdownRemark;
   const prev = data.prev;
   const next = data.next;
 
   return (
-    <Layout
-      title={frontmatter.title}
-      description={frontmatter.description || excerpt}
-      socialImage={
-        frontmatter.social_image ? frontmatter.social_image.absolutePath : ""
-      }
-    >
+    <Layout>
       <PostWrapper>
         <article>
           <PostTitle>{frontmatter.title}</PostTitle>
@@ -47,6 +42,16 @@ const PostTemplate = ({ data }) => {
 };
 
 export default PostTemplate;
+
+export const Head = ({ data }) => {
+  const { frontmatter, excerpt } = data.markdownRemark;
+  return (
+    <Seo
+      title={frontmatter.title}
+      description={frontmatter.description || excerpt}
+    />
+  );
+};
 
 const PostWrapper = styled.div`
   padding-top: var(--size-900);
@@ -187,9 +192,6 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         description
         tujuan
-        social_image {
-          absolutePath
-        }
       }
     }
 
