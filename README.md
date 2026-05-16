@@ -1,5 +1,14 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/6d15ac66-cf7f-4daa-a7a7-7277ada0e870/deploy-status)](https://app.netlify.com/sites/surveyrsp/deploys)
 
+## Donasi ❤
+
+Klik link dibawah untuk mendukung pengembangan
+
+[![Donate trakteer](https://img.shields.io/badge/Donate-Trakteer-red?style=for-the-badge&link=https%3A%2F%2Ftrakteer.id%2Fmdestafadilah%2Ftip&labelColor=%239f39b5&color=%2300bcd4)](https://trakteer.id/mdestafadilah/tip)
+[![Donate saweria](https://img.shields.io/badge/Donate-Saweria-red?style=for-the-badge&link=https%3A%2F%2Fsaweria.co%2Fmdestafadilah&labelColor=%239f39b5&color=%2300bcd4)](https://saweria.co/mdestafadilah)
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0549ef54-5efa-487b-b98c-6adf7ce549f2/deploy-status)](https://app.netlify.com/sites/landingpendaftaran/deploys)
+
 # RS Persahabatan Landing Survey Online
 
 Landing Survey Online RS Persahabatan
